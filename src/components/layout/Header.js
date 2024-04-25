@@ -12,7 +12,7 @@ function Header() {
 						<Typography
 							component='h1'
 							variant='h5'
-							fontWeight='bold'
+							fontWeight='700'
 							flex={1}>
 							وبلاگ FateFul
 						</Typography>
