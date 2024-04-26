@@ -5,6 +5,7 @@ import sanitizeHtml from "sanitize-html";
 import { useParams } from "react-router-dom";
 import { GET_AUTHOR_INFO } from "../../graphql/queries";
 import { Avatar, Container, Grid, Typography } from "@mui/material";
+import Loader from "../shared/Loader";
 
 function AuthorPage() {
 	const { slug } = useParams();
@@ -13,7 +14,7 @@ function AuthorPage() {
 		variables: { slug },
 	});
 
-	if (loading) return <h3>Loading...</h3>;
+	if (loading) return <Loader />;
 
 	if (error) return <h3>Error...</h3>;
 
